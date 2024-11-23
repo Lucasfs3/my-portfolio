@@ -1,0 +1,181 @@
+:root {
+    --primary: rgb(100, 100, 100);
+    --secondary: #303030;
+    --light: #f5f5f5;
+    --dark: #1a1a1a;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    background: var(--light);
+    color: var(--dark);
+    line-height: 1.6;
+  }
+  
+  .header {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    color: white;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .header-content {
+    text-align: center;
+    z-index: 1;
+  }
+  
+  .header-title {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    animation: fadeInDown 1s ease;
+  }
+  
+  .header-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1s ease;
+  }
+  
+  .btn {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 50px;
+    background: white;
+    color: var(--primary);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  }
+  
+  .section {
+    padding: 5rem 2rem;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
+  .project-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .project-content {
+    padding: 1.5rem;
+  }
+  
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+  
+  .skill-tag {
+    padding: 0.5rem 1rem;
+    background: var(--secondary);
+    color: white;
+    border-radius: 50px;
+    font-size: 0.9rem;
+  }
+
+  #contatos {
+    text-align: center;
+  }
+
+  #contatos h2 {
+    margin-bottom: 25px;
+  }
+
+  #contatos a {
+    margin: 10px;
+  }
+
+  #contatos a:hover {
+    box-shadow: 0px 0px 20px white;
+  }
+
+  .br-none {
+    display: none;
+  }
+  
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .floating-shapes {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .shape {
+    position: absolute;
+    animation: float 20s infinite linear;
+    opacity: 0.1;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0) rotate(0deg);
+    }
+    100% {
+      transform: translateY(-100vh) rotate(360deg);
+    }
+  }
+
+  @media (max-width: 660px) {
+    .br-none {
+      display: block;
+    }
+}
